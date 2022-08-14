@@ -1,0 +1,57 @@
+@media screen and (max-width:767px) {
+    .cal {
+        display: none;
+    }
+
+    .input span {
+        width: 40%;
+    }
+
+    .carousel-inner .img {
+        height: 200px;
+    }
+
+    .carousel-inner .img {
+        height: 200px;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    .imgb>div {
+        padding: 0;
+    }
+    .imgb{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: scroll;
+    }
+    .imgb img{
+        width: 95%;
+    }
+    .displayll{
+        position: inherit;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .boxhidden{
+        display: none;
+    }
+    .boxshow{
+        display: block;
+    }
+    .bigbrow-end{
+        height: 190px;
+    }
+    .d-flexul{
+        display: flex;
+        justify-content: space-around;
+    }
+    .pagination{
+        width: 70%;
+    }
+    .pagination li{
+        margin: auto 20px;
+    }
+}

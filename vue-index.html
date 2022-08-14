@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/jquery-1.11.3.min.js"></script>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/vue-index.css">
+  <link rel="stylesheet" href="./css/vue-indexphone.css">
+  <script src="./js/bootstrap.bundle.min.js"></script>
+
+  <script src="./js/vue-2.4.0(1).js"></script>
+  <script src="./js/vue-router-3.0.1.js"></script>
+  <script src="./js/super_slider.js"></script>
+</head>
+<style type="text/css">
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    font: 12px/24px "微软雅黑";
+  }
+
+  .box {
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    
+  }
+  #roll dd{
+    /* border: 1px solid red; */
+    margin: 10px 10px;
+  }
+  #roll {
+    width: 100%;
+  }
+  #roll dd img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #roll dd {
+    width: 110px;
+    height: 110px;
+    /* border: 1px solid #00EE00; */
+    float: left;
+    margin-right: 5px;
+  }
+  #rolll {
+    width: 100%;
+  }
+  #rolll dd img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #rolll dd {
+    width: 90px;
+    height: 90px;
+    margin: 10px auto;
+    /* border: 1px solid #00EE00; */
+    float: left;
+    margin-right: 5px;
+  }
+</style>
+<body>
+  <div id="app">
+    <div class="container-fluid border-bottom">
+      <div class="container">
+        <div class="row conf">
+          <div class="col-lg-3 col-md-3 text-center con cal">
+            <div>
+              <img src="./img/logo.png">
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-9 col-sm-12 con">
+            <div class="input">
+              <span>大咖设计</span>
+              <input type="text" placeholder='请输入内容'>
+              <button>搜索</button>
+            </div>
+          </div>
+          <div class="col-lg-3 con cal">
+            <div class="phone">
+              <img src="./img/head-dh.png" style="width: 50px;">
+              <ul>
+                <li>24小时咨询电话</li>
+                <li>
+                  <h3>027-284111</h3>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-md bg-white navbar-dark">
+      <!-- Brand -->
+      <a class="navbar-brand shou" href="#">首页</a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+        style="background-color: #BA9B8B;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+
+      <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+        <ul class="navbar-nav justify-content-between navul">
+          <li class="nav-item navi">
+            <a class="nav-link text-dark" href="#">首页</a>
+          </li>
+          <li class="nav-item navi">
+            <a class="nav-link text-dark" href="#">实景案例</a>
+          </li>
+          <li class="nav-item navi">
+            <a class="nav-link text-dark" href="#">澳华产品</a>
+          </li>
+          <li class="nav-item navi">
+            <a class="nav-link text-dark" href="#">大咖设计</a>
+          </li>
+          <li class="nav-item navi">
+            <a class="nav-link text-dark" href="#">热装楼盘</a>
+          </li>
+          <li class="nav-item navi">
+            <a class="nav-link text-dark" href="#">金钻工程</a>
+          </li>
+          <li class="nav-item navi">
+            <a class="nav-link text-dark" href="#">澳华优势</a>
+          </li>
+          <li class="nav-item navi">
+            <a class="nav-link text-dark" href="#">关于澳华</a>
+          </li>
+          <li class="nav-item navi">
+            <button style="border-radius: 25px; width: 100px; border-style: none; background-color: #BA9B8B;"><a
+                class="nav-link text-dark" href="#">快速报价</a></button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container" style="padding: 0%;">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/banner1.jpg" class="d-block w-100 img img-responsive" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/banner2.png" class="d-block w-100 img img-responsive" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/banner3.jpg" class="d-block w-100 img img-responsive" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/banner4.jpg" class="d-block w-100 img img-responsive" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- vue组件 -->
+    
+    <div class="container displaylls">
+      <div class="row">
+        <div class="boxleft col-xl-9">
+          <div class="boxhidden d-none d-xl-block">
+            <div class="box d-flex justify-content-between align-items-center">
+              <span class="prev"><img src="./img/方向-向左 (1).png" style="width: 50px;"></span>
+              <div>
+                <dl id="roll">
+                  <dd><img src="./img/share/photo1.png"/></dd>
+                  <dd><img src="./img/share/photo3.png" /></dd>
+                  <dd><img src="./img/share/photo3.png" /></dd>
+                  <dd><img src="./img/share/photo4.png" /></dd>
+                  <dd><img src="./img/share/photo5.png" /></dd>
+                  <dd><img src="./img/share/photo6.png" /></dd>
+                  <dd><img src="./img/share/photo7.png" /></dd>
+                  <dd><img src="./img/share/photo8.png" /></dd>
+                  <dd><img src="./img/share/photo9.png" /></dd>
+                </dl>
+              </div>
+              <span class="next"><img src="./img/方向-向右 (1).png" style="width: 50px;"></span>
+            </div>
+          </div>
+          <div class="bixshow d-block d-xl-none">
+            <div class="boxs d-flex justify-content-between align-items-center" style="overflow:scroll;">
+              <div>
+                <dl id="rolll" class="d-flex flex-nowrap">
+                  <dd><img src="./img/share/photo1.png"/></dd>
+                  <dd><img src="./img/share/photo3.png" /></dd>
+                  <dd><img src="./img/share/photo3.png" /></dd>
+                  <dd><img src="./img/share/photo4.png" /></dd>
+                  <dd><img src="./img/share/photo5.png" /></dd>
+                  <dd><img src="./img/share/photo6.png" /></dd>
+                  <dd><img src="./img/share/photo7.png" /></dd>
+                  <dd><img src="./img/share/photo8.png" /></dd>
+                  <dd><img src="./img/share/photo9.png" /></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" v-for="(item,index) in dataShow" :class="{'alt':index%2 == 1}">
+        <div class="boxleft col-xl-9 col-12">
+          <div class="row d-flex justify-content-center boxleftdiv" style="margin-top: 10px;">
+            <div class="col-xl-2 d-flex justify-content-center">
+              <img :src="item.img">
+            </div>
+            <div class="col-xl-8 d-flex flex-column justify-content-around" style="padding: 0;">
+              <p>小三看、个该大原价，原价有又去，石国兴不是才是</p>
+              <span style="color: #BA9B8B;">序言：你说啥是哈，我说啥说优势和你废话iOS啊哈付给ofhisOA返回和粉丝和发酵食品Joi</span>
+            </div>
+            <div class="col-xl-2 d-flex justify-content-center align-items-center">
+              <button>查看详情</button>
+            </div>
+          </div>
+          <div class="row imgb">
+            <div class="col-xl-4 col-12">
+              <img :src="item.imgbutton1" class="img-fluid">
+            </div>
+            <div class="col-xl-4 col-12">
+              <img :src="item.imgbutton2" class="img-fluid">
+            </div>
+            <div class="col-xl-4 col-12">
+              <img :src="item.imgbutton3" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="displayll col-12">
+        <div class="finform0 finform d-flex flex-column align-items-center d-flex">
+          <h3>免费获取家装报价</h3>
+          <span class="span1">现在累计有<span>208712</span>位获取</span>
+          <input type="text" class="form-control" placeholder="请输入您的姓名">
+          <input type="text" class="form-control" placeholder="请输入您的姓名">
+          <input type="text" class="form-control" placeholder="请输入您的姓名">
+          <button>获取报价</button>
+          <span class="span2">免费电话申请：<span class="span3">027-284111</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <nav aria-label="Page navigation example" class="col-xl-9 d-flex justify-content-center">
+        <ul class="pagination d-flex justify-content-center" style="width: 70%;">
+          <li class="page-item " @click="prev"><a v-on:click="prePage" href="#" class="page-link">上一页</a></li>
+          <div v-for="(item,index) in pageNum">
+            <li class="page-item d-none d-xl-block"><a class="page-link" v-on:click="toPage(index)" :class="{active:currentPage==index}"
+                href="#">{{index+1}}</a></li>
+          </div>
+          <li class="page-item"><a v-on:click="nextPage" href="#" class="page-link">下一页</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="bigbrow-end ">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-2 end d-none d-xl-block">
+            <ui>
+              <li style="color: white;">关于我们</li>
+              <li>澳华经历</li>
+              <li>官方微博</li>
+            </ui>
+          </div>
+          <div class="col-xl-2 end d-none d-xl-block">
+            <ul>
+              <li style="color: white;">客户服务</li>
+              <li>在线预约</li>
+              <li>滴滴专车</li>
+              <li>售后服务</li>
+            </ul>
+          </div>
+          <div class="col-xl-4 end d-none d-xl-block">
+            <div>
+              <ul>
+                <li style="color:white">联系我们</li>
+                <li>售前咨询电话: 027-82411111</li>
+                <li>售后咨询电话: 027-82866788</li>
+                <li>公司地址:武汉市江岸区澳路232号金冠大厦</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 end">
+            <ul>
+              <li>关于我们</li>
+              <li>
+                <ul class="d-flex d-flexul">
+                  <li><img src="./img/icon_dy.png"></li>
+                  <li><img src="./img/icon_wb.png"></li>
+                  <li><img src="./img/icon_wx.png"></li>
+                  <li><img src="./img/icon_xcx.png"></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr style="background-color: white;">
+      <div class="container d-none d-xl-block" style="margin-top:40px;">
+        <ul>
+          <li style="font-size:20px; color:#E1CDCC">武汉澳华装饰设计工程有限公司页面版权所有 www.ao hua.com</li>
+          <li style="font-size:20px; color:#E1CDCC">鄂ICP备11005316号-1</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
+<script>
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      img: '',
+      list: [{
+        id: 1,
+        img: './img/share/photo1.png',
+        imgbutton1: "./img/share/share1-1.jpg",
+        imgbutton2: './img/share/share1-2.jpg',
+        imgbutton3: './img/share/share2-1.jpg',
+      },
+      {
+        id: 1,
+        img: './img/share/photo3.png',
+        imgbutton1: "./img/share/share2-2.jpg",
+        imgbutton2: './img/share/share3-1.jpg',
+        imgbutton3: './img/share/share3-2.jpg',
+      },
+      {
+        id: 1,
+        img: './img/share/photo4.png',
+        imgbutton1: "./img/share/share6-1.jpg",
+        imgbutton2: './img/share/share4-2.jpg',
+        imgbutton3: './img/share/share4-1.jpg',
+      },
+      {
+        id: 1,
+        img: './img/share/photo5.png',
+        imgbutton1: "./img/share/share4-1.jpg",
+        imgbutton2: './img/share/share5-1.jpg',
+        imgbutton3: './img/share/share5-2.jpg',
+      },
+
+      {
+        id: 1,
+        img: './img/share/photo6.png',
+        imgbutton1: "./img/share/share1-1.jpg",
+        imgbutton2: './img/share/share1-2.jpg',
+        imgbutton3: './img/share/share2-1.jpg',
+      },
+      {
+        id: 1,
+        img: './img/share/photo7.png',
+        imgbutton1: "./img/share/share1-1.jpg",
+        imgbutton2: './img/share/share1-2.jpg',
+        imgbutton3: './img/share/share2-1.jpg',
+      },
+      {
+        id: 1,
+        img: './img/share/photo8.png',
+        imgbutton1: "./img/share/share1-1.jpg",
+        imgbutton2: './img/share/share1-2.jpg',
+        imgbutton3: './img/share/share2-1.jpg',
+      },
+      {
+        id: 1,
+        img: './img/share/photo9.png',
+        imgbutton1: "./img/share/share1-1.jpg",
+        imgbutton2: './img/share/share1-2.jpg',
+        imgbutton3: './img/share/share2-1.jpg',
+      },
+      {
+        id: 1,
+        img: './img/share/photo9.png',
+        imgbutton1: "./img/share/share1-1.jpg",
+        imgbutton2: './img/share/share1-2.jpg',
+        imgbutton3: './img/share/share2-1.jpg',
+      },
+      ],
+      pageSize: 4,
+      currentPage: 0
+    },
+    methods: {
+      nextPage: function () {
+        var vm = this;
+        if (vm.currentPage == vm.pageNum - 1) return;
+        vm.currentPage++;
+
+      },
+      prePage: function () {
+        var vm = this;
+        if (vm.currentPage == 0) return;
+        vm.currentPage--;
+
+      },
+      toPage: function (page) {
+        var vm = this;
+        vm.currentPage = page
+        // event.currentTarget.className = "classname"
+      }
+    },
+    computed: {
+      dataShow: function () {
+        let start = this.currentPage * this.pageSize;
+        let end = Math.min((this.currentPage + 1) * this.pageSize, this.list.length)
+        return this.list.slice(start, end)
+      },
+      pageNum: function () {
+        return Math.ceil(this.list.length / this.pageSize) || 1;
+      }
+    },
+  })
+</script>
+<script>
+  $(".box").superSlider({
+    prevBtn: '.prev',
+    nextBtn: '.next',
+    listCont: "#roll",//滚动列表外层
+    scrollWhere: "prev",//自动滚动方向next
+    delayTime: 1000,//自动轮播时间间隔
+    speed: 300,//滚动速度
+    amount: 1,//单次滚动数量
+    showNum: 5,//显示数量
+    autoPlay: false//自动播放
+  });
+</script>

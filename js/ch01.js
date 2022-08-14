@@ -1,0 +1,10 @@
+// $(function(){
+//     $('.imgtext').hide()
+//     $('.conimg1').hover(function(){
+//         $('.imgtext').show()
+//         $('.span').hide()
+//     },function(){
+//         $('.imgtext').hide()
+//         $('.span').show()
+//     })
+// })

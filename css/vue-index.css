@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+p{
+  margin-bottom: 0px;
+}
+.displaylls{
+    margin-top: 20px;
+    position: relative;
+}
+.displayll{
+    margin-top: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 22%;
+    border: 1px solid rgb(243, 241, 241);
+}
+.boxleft{
+    margin: 20px 0px;
+    border: 1px solid rgb(243, 241, 241);
+}
+.boxleft button{
+    width: 80px;
+    height: 30px;
+    border-style: none;
+    background-color: white;
+    color: black;
+    font-size: 10px;
+    border: 1px solid #ccc;
+}
+.boxleftdiv p{
+    font-size: 20px;
+    font-weight:500;
+}.boxleftdiv span{
+    font-size: 10px;
+}
+.boxleft .imgb{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.imgb img{
+    height: 200px;
+}
+.finform0{
+    width: 100%;
+    margin: 20px auto;
+}
+.pagination{
+    width: 40%;
+}
+.pagination li{
+    margin: auto 5px;
+}
